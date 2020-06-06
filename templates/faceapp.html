@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Divya's-Face Recognition Project</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css')}}">
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:ital,wght@1,200&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+  <body>
+  <div class="top-container">
+    <h1><em>Face Recgnition Project</em></h1>
+    <h2>Image processing application of recognizing face and classifying gender<h2>
+    <img src="{{url_for('static',filename='images/image1.jpg')}}" alt="image1-image">
+    <hr>
+    {% block bodyblock %}
+    <div class="top-container">
+     <form action="#" method="post" enctype="multipart/form-data">
+            <label for="upload"><h3>Upload to predict<h3></label>
+            <input type="file" id="upload" name="image" required="true">
+            <input type="submit" value="upload & predict">
+        </form>
+        </div>
+<hr>
+ {% if fileupload  %}
+
+    <div class="top-container">
+        <div class="row">
+            <div class="col-md-6" id="predict">
+                <img src="{{ url_for('static',filename='uploads/')}}{{ img_name }}" alt="" width="{{ w }}" height="300">
+            </div>
+            <div class="col-md-6" id="predict">
+                <img src="{{ url_for('static',filename='predict/')}}{{ img_name }}" alt="" width="{{ w }}" height="300">
+            </div>
+        </div>
+    </div>
+
+    <style>
+        #predict{
+            border: solid;
+            color:#002f4d;
+            text-align: center;
+        }
+    </style>
+     {% endif %}
+
+{% endblock %}
+  <div class="top-container">
+    <h1><em>Let's Go back Home...</em></h1>
+    <a class="footer-link" href="{{ url_for('base') }}">Home</a>
+    </div>
+
+   
+
+    <div class="bottom-container">
+    <h2>If you would like to connect with me</h2>
+      <a class="footer-link" href="www.linkedin.com/in/divya-puraswani">LinkedIn</a>
+      <a class="footer-link" href="https://github.com/DivyaPuraswani ">GitHub</a>
+      <p class="copyright">© Divya Puraswani.</p>
+    </div>
+  </div>
+</body>
+
+</html>

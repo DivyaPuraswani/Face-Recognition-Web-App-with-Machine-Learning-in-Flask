@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Divya's-Face Recognition Project</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css')}}">
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:ital,wght@1,200&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+  <body>
+  <div class="top-container">
+    <h1><em>Face Recgnition Project</em></h1>
+    <h2>Image processing application of recognizing face and classifying gender<h2>
+    <img src="{{url_for('static',filename='images/image1.jpg')}}" alt="image1-image">
+    <hr>
+  <div class="middle-container">
+      <h1><em>Objective</em></h1>
+      <p class="intro"><h2>To Create a Gender Classification model and integrate to Flask App</h2></p>
+    </div>
+    <hr>
+    <div class="middle-container">
+      <h1><em>Deliverables</em></h1>
+      <p class="intro"><h2>Flask App integrated with Machine learning model where user can upload an image and app has to detect face and identify gender</h2></p>
+      <img src="{{url_for('static',filename='images/002.PNG')}}" alt="image2-image">
+    </div>
+    <hr>
+    <div class="skills">
+      <h1><em>Model Pipeline</em></h1>
+      <img src="{{url_for('static',filename='images/003.PNG')}}" alt="image3-image" height=500 width=1000>
+  <hr>
+    <div class="top-container">
+    <h1><em>Let's Check This Out..</em></h1>
+    <a class="footer-link" href="{{ url_for('faceapp') }}">FaceApp</a>
+    </div>
+</div>
+<hr>
+    <div class="bottom-container">
+    <h2>If you would like to connect with me</h2>
+      <a class="footer-link" href="https://linkedin.com/in/divya-puraswani">LinkedIn</a>
+      <a class="footer-link" href="https://github.com/DivyaPuraswani ">GitHub</a>
+      <p class="copyright">© Divya Puraswani.</p>
+    </div>
+</body>
+
+</html>
